@@ -1,4 +1,6 @@
-angular.module('movieDBDirectives',[]).directive('movieInfoBox', function() {
+angular.module('movieDBDirectives',[])
+
+.directive('movieInfoBox', function() {
   return {
     restrict: 'E',    // usage of the directive: E -> element
     scope: {
@@ -6,4 +8,12 @@ angular.module('movieDBDirectives',[]).directive('movieInfoBox', function() {
     },
     templateUrl: 'templates/directives/movie-info-box.html'
   };
+})
+
+
+.directive('movieNav', function() {
+	return {
+	  restrict: 'E', 
+	  templateUrl: 'templates/directives/movieNav.html'
+	};
 });
