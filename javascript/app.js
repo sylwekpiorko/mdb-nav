@@ -7,21 +7,25 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
 .config(function($routeProvider) {
 		 
 		$routeProvider
-		  .when('/popular', {
-		  	templateUrl: 'templates/movies.html',
-		  	controller: 'MovieListController'
-		  })
-		  .when('/upcoming', {
-		  	templateUrl: 'templates/movies.html',
+			.when('/popular', {
+				templateUrl: 'templates/movies.html',
+				controller: 'MovieListController'
+			})
+			.when('/upcoming', {
+				templateUrl: 'templates/movies.html',
 			controller: 'MovieUpcomingController'
-		  })
-		  .when('/topRated', {
-		  	templateUrl: 'templates/movies.html',
+			})
+			.when('/topRated', {
+				templateUrl: 'templates/movies.html',
 			controller: 'MovieTopRatedController'
-		  })
-		  .when("/nowPlaying", {
-			templateUrl: "templates/movies.html",
-			controller: "MovieNowPlayingController"
-		})
-		  .otherwise({redirectTo: '/popular'}); 
+			})
+			.when("/nowPlaying", {
+				templateUrl: "templates/movies.html",
+				controller: "MovieNowPlayingController"
+			})
+			.when("/about", {
+				templateUrl: 'templates/about.html',
+				controller: 'AboutController'
+			})
+			.otherwise({redirectTo: '/popular'}); 
 	});
